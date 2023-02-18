@@ -275,7 +275,7 @@ body {
 }
 
 .img-1 {
-  background-image: linear-gradient(to right bottom, #AD00AB, #0F335C), url(image/img-3.jpg);
+  background-image: linear-gradient(to right bottom, #AD00AB, #0F335C), url(../image/img-3.jpg);
   background-size: cover;
   background-position: center;
   height: 13rem;
@@ -287,7 +287,7 @@ body {
 }
 
 .img-2 {
-  background-image: linear-gradient(to right bottom, #AD00AB, #0F335C), url(image/img-4.jpg);
+  background-image: linear-gradient(to right bottom, #AD00AB, #0F335C), url(../image/img-4.jpg);
   background-size: cover;
   background-position: center;
   height: 13rem;
@@ -299,7 +299,7 @@ body {
 }
 
 .img-3 {
-  background-image: linear-gradient(to right bottom, #AD00AB, #0F335C), url(image/img-5.jpg);
+  background-image: linear-gradient(to right bottom, #AD00AB, #0F335C), url(../image/img-5.jpg);
   background-size: cover;
   background-position: center;
   height: 13rem;
