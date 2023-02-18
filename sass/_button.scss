@@ -1,0 +1,20 @@
+%button-dark {
+    background-color: $color-primary;
+    border: none;
+    color:$color-white;
+    text-align: center;
+    margin: 2rem;
+    letter-spacing: 1px;
+    padding: 1.3rem 2.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+}
+%button-light {
+    color: $color-grey-dark-3;
+    text-align: center;
+    margin: 2rem;
+    letter-spacing: 1px;
+    padding: 1.3rem 2.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+}

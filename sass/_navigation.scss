@@ -1,0 +1,151 @@
+.navigation {
+
+
+    //nav menu background
+
+    &_background {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 5rem;
+        right: 5rem;
+        background-image: radial-gradient($color-primary-light, $color-primary-dark);
+        z-index: 1500;
+        transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    }
+
+    &_checkbox {
+
+        display: none;
+
+        &:checked~.navigation_nav {
+            opacity: 1;
+            width: 100%;
+        }
+
+        //nav menu cover the screen
+
+        &:checked~.navigation_background {
+            transform: scale(80);
+        }
+
+        //the icon became X
+
+        &:checked+.navigation_button .navigation_icon {
+            background-color: transparent;
+        }
+
+        &:checked+.navigation_button .navigation_icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+
+        &:checked+.navigation_button .navigation_icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+    }
+
+    &_button {
+        z-index: 2000;
+        background-color: $color-white;
+        height: 4rem;
+        width: 4rem;
+        top: 5rem;
+        right: 5rem;
+        position: fixed;
+        border-radius: 50%;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &_icon {
+        position: relative;
+        margin-top: 2rem;
+        transform: scale(.7);
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-primary-dark;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: " ";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before {
+            top: -.8rem;
+        }
+
+        &::after {
+            top: .8rem;
+        }
+
+    }
+
+    &_button:hover &_icon::before {
+        top: -1rem;
+    }
+
+    &_button:hover &_icon::after {
+        top: 1rem;
+    }
+
+
+    &_nav {
+        height: 100vh;
+        z-index: 1500;
+        position: fixed;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        width: 0;
+        transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    &_list {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        list-style: none;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        width: 100%;
+    }
+
+    &_link:link,
+    &_link:visited {
+        font-size: 3rem;
+        font-weight: 300;
+        padding: 1rem 2rem;
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $color-white 50%);
+        background-size: 220%;
+        transition: all .4s;
+
+        span {
+            margin-right: 1.5rem;
+            display: inline-block;
+        }
+    }
+
+    &_link:hover,
+    &_link:active {
+        color: $color-primary-light;
+        background-position: 100%;
+        transform: translateX(1rem);
+    }
+
+}
